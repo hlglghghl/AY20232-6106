@@ -11,4 +11,4 @@ def main():
     q=request.form.get("q")
     return render_template("main.html",query="q")
 if __name__=="__main__":
-    app.run(port=5001)
+    app.run()
