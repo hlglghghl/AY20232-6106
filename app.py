@@ -6,5 +6,9 @@ app = Flask(__name__)
 def index():
     return(render_template("index.html"))
 
+@app.route("/main",methods=["GET","POST"])
+def main():
+    q=request.form.get("q")
+    return render_template("main.html",query="q")
 if __name__=="__main__":
-    app.run()
+    app.run(port=5001)
